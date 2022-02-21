@@ -1,8 +1,8 @@
 ﻿class env:
     # BOT USER NAME AND PASSWORD 
     password = 'testing321'
-    BotName = 'nekiva_bot'
-    API_KEY = "5121049173:AAFFdEGfTVZv9-1o8IvjhQQViUT4yixYBK8" # BOT API KEY 
+    BotName = 'official_nekiva_bot'
+    API_KEY = "5082824975:AAFWph2evSkgZbj0FgyMQXmlqg5IlwoQ0kU" # BOT API KEY 
     #####
  
     
@@ -14,7 +14,7 @@
     pinned_message ='https://twitter.com/__X__2/status/1487061487067750404?t=ujqmYoSre6phHf9wcwnPBQ&s=19'
     
     
-    PerRefToken = 100 # THE AMOUNT OF TOKENS THAT A USER WILL RECIEVE ON PER REFFERRAL
+    PerRefToken = 20 # THE AMOUNT OF TOKENS THAT A USER WILL RECIEVE ON PER REFFERRAL
     
     airdrop_end_date=25
     airdrop_end_month = 3

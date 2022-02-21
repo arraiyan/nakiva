@@ -205,7 +205,13 @@ def username(update: Update, context: CallbackContext) -> None:
 
 def withdraw(update: Update, context: CallbackContext) -> None:
     if update.message.chat.type=='private':
-        update.message.reply_text(f'You will be able to withdraw and claim your airdrop on 17-Feb-2022\n',parse_mode='HTML')
+        update.message.reply_text(f'You would recieve withdrawl after 48 hours and review\n',parse_mode='HTML')
+        for i in env.adminlist:
+            try:
+                chat_id = update.message.chat.id
+                context.bot.send_message(chat_id = i , text = f'user with id {chat_id} requested a withdrawal')
+            except:
+                continue
         return
 
 def Reffral(update: Update, context: CallbackContext) -> None:
@@ -225,7 +231,7 @@ def TotalBalance(update: Update, context: CallbackContext) -> None:
         df = d2[data[update.effective_chat.id]]
         a1 = env.PerRefToken
         a2 = 100
-        txt = f'💵Balance: {a2} + {a1*int(df[6])}\n\n👥Total referrals: {df[6]}\n\n💰Total Balance: {a2*int(df[6])+a1}\n\n➡️ Click referral button to earn more 💰'
+        txt = f'💵Balance: {a2} + {a1*int(df[6])}\n\n👥Total referrals: {df[6]}\n\n💰Total Balance: {a1*int(df[6])+a2}\n\n➡️ Click referral button to earn more 💰'
         update.message.reply_text(parse_mode='HTML' , text=txt)
 
         return

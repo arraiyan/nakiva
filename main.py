@@ -159,8 +159,8 @@ def CHECK(update: Update, context: CallbackContext)    -> None:
 
 def CHECKCHANNEL(update: Update, context: CallbackContext) -> None:
     if update.message.chat.type == 'private':
-        CurrentMemberData = context.bot.get_chat_member(chat_id=env.ChannelName,user_id = update.message.from_user.id).to_dict()
-        print(CurrentMemberData)
+        b = Bot("5121049173:AAFFdEGfTVZv9-1o8IvjhQQViUT4yixYBK8" )
+        CurrentMemberData = b.get_chat_member(chat_id='@nekiva',user_id = update.message.from_user.id).to_dict()
         #(data)
         if (CurrentMemberData['status'] == 'creator') or (CurrentMemberData['status'] == 'member') or (CurrentMemberData['status'] == 'administrator') or (CurrentMemberData['status'] == 'restricted'):
             reply_markup = ReplyKeyboardRemove()
